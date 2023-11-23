@@ -11,8 +11,8 @@ class Printer
 
   def run
     while index <= 10
-      mutex.synchronize do
-        puts "Thread #{thread_number}: #{index}"
+      @mutex.synchronize do
+        puts "Thread #{thread_number}: #{@index}"
         @index += 1
       end
     end
